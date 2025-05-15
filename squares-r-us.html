@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <!-- <link href="" rel="stylesheet" type="text/css" > -->
+  <!-- <script src="" defer></script> -->
+  <!-- For auto-reload of page upon saving. -->
+  <!-- <script type="text/javascript" src="https://livejs.com/live.js"></script> -->
+  <title>Squares R Us</title>
+</head>
+<body>
+
+  <h1>Squares R Us</h1>
+  <article>
+    <h2>This application calculates the square of a number.</h2>
+    <p>How to use:</p>
+    <ol>
+      <li>Press the button.</li>
+      <li>Input a number.</li>
+      <li>Press &lt;Enter&gt;.</li>
+      <li>View answer below.</li>
+    </ol>
+    <button id="calculate-square" onclick="calculateSquare()">Calculate Square</button>
+    <!-- <p>The square of <strong id="user-input">0</strong> is <strong id="squared-user-input">0</strong>.</p> -->
+  </article>
+
+  <script>
+    function calculateSquare() {
+      let userInput = prompt("Please input a number to be squared: ");
+      if (isNaN(userInput)) {
+        alert(`'${userInput}' is not a number. Try again.`);
+      } else if (userInput === "") {
+        alert("Your submission was blank. Please provide an input string.");
+      } else {
+        let number = Number(userInput);
+        let squaredNumber = number * number;
+        alert(`${number} * ${number} = ${squaredNumber}`);
+      }
+    }
+  </script>
+</body>
+</html>
